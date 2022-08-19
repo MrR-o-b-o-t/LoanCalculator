@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" class="h-100">
   <head>
-    <title>App Name: A Coding Project By Sam Kautz</title>
+    <title>Loan Calculator: A Coding Project By Sam Kautz</title>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta
@@ -31,7 +31,7 @@
             class="d-inline-block align-text-top"
             alt="Sam Kautz Logo"
             height="34"
-          />App Name</a
+          />Loan Calculator</a
         >
         <button
           class="navbar-toggler"
@@ -68,7 +68,100 @@
       </div>
     </nav>
     <main class="flex-shrink-0">
-      <div class="container"></div>
+      <div class="container">
+        <div class="row mt-3">
+          <div class="col-6">
+            <h1 class="fw-bold">Loan Calculator</h1>
+            <form class="bg-secondary p-3">
+              <div class="">
+                <label for="loanAmount" class="form-label">Loan Amount</label>
+                <input
+                  type="number"
+                  class="form-control"
+                  id="loanAmount"
+                  aria-describedby="emailHelp"
+                  placeholder="15000"
+                />
+              </div>
+              <div class="">
+                <label for="loanPayments" class="form-label">Payments</label>
+                <input
+                  type="number"
+                  class="form-control"
+                  id="loanPayments"
+                  placeholder="60"
+                />
+              </div>
+              <div class="">
+                <label for="loanRate" class="form-label">Rate</label>
+                <input
+                  type="number"
+                  class="form-control"
+                  id="loanRate"
+                  placeholder="3"
+                />
+              </div>
+              <div class="d-flex justify-content-end">
+                <button
+                  type="button"
+                  class="btn btn-primary mt-2"
+                  id="btnSubmit"
+                >
+                  Submit
+                </button>
+              </div>
+            </form>
+          </div>
+          <div class="col-6">
+            <div class="row row-cols-1 row-cols-lg-2">
+              <div class="col"></div>
+              <h2>Your Monthly Payments</h2>
+              <h1 id="monthlyPayment"></h1>
+            </div>
+            <div class="row">
+              <div class="col-6">
+                <p>Total Principal</p>
+                <p>Total Interest</p>
+                <p>Total Cost</p>
+              </div>
+              <div class="col-6">
+                <div class="col-6">
+                  <p id="totalPrincipal"></p>
+                  <p id="totalInterest"></p>
+                  <p id="totalCost"></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row row-cols-1">
+            <table class="table table-striped mt-3">
+              <thead>
+                <tr class="bg-primary text-light">
+                  <th scope="col">Month</th>
+                  <th scope="col">Payment</th>
+                  <th scope="col">Principal</th>
+                  <th scope="col">Interest</th>
+                  <th scope="col">Total Interest</th>
+                  <th scope="col">Balance</th>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- Dynamic Data here 
+                  <tr>
+                    <th scope="row">1</th>
+                      <td>Mark</td>
+                      <td>Otto</td>
+                      <td>@mdo</td>
+                      <td>Mark</td>
+                      <td>Otto</td>
+                      <td>@mdo</td>
+                  </tr>
+                -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
     </main>
     <footer class="footer mt-auto py-3 sticky-footer">
       <div class="container-fluid">
@@ -119,5 +212,8 @@
       crossorigin="anonymous"
     ></script>
     <script src="js/site.js"></script>
+    <script>
+      document.getElementById("btnSubmit").addEventListener("click", getData);
+    </script>
   </body>
 </html>
