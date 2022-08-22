@@ -6,6 +6,7 @@ function getData() {
     let loanAmount = document.getElementById("loanAmount").value
     let payments = document.getElementById("loanPayments").value
     let loanRate = document.getElementById("loanRate").value
+    calcData(loanAmount, payments, loanRate)
     displayData(loanAmount, payments, loanRate)
 }
 
@@ -14,6 +15,10 @@ function getData() {
 // loop over data
 // store data in an object or array
 
+function calcData(loanAmount, payments, loanRate) {
+    let monthlyPayment =
+        console.log(monthlyPayment)
+}
 
 // Display data
 // loop over object/array
